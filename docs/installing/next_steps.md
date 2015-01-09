@@ -118,7 +118,7 @@ Alaveteli can import a list of public authorities and their contact email addres
 
 You can find the uploader in under the "Authorities" tab of the admin section, or go straight to `/admin/body/import_csv`.
 
-## Add some public holidays
+## Set the amount of time authorities will be given to respond to requests
 
 In most countries that have a Freedom of Information law, authorities
 have a certain number of days in order to respond to requests. Alaveteli
@@ -133,6 +133,8 @@ options in `config/general.yml`. Most laws specify that the days are
 either working days, or calendar days. You can set this using the
 [`WORKING_OR_CALENDAR_DAYS`]({{site.baseurl}}docs/customising/config/#working_or_calendar_days)
 option in `config/general.yml`.
+
+## Add some public holidays
 
 Alaveteli calculates the due dates of requests taking account of the
 public holidays you enter into the admin interface. If you have set the
