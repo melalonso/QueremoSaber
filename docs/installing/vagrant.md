@@ -8,10 +8,10 @@ title: Vagrant
 Vagrant provides an easy method to set up virtual development environments; for
 further information see <a href="http://www.vagrantup.com">the Vagrant website</a>.
 We bundle an example Vagrantfile in the repository, which runs the
-<a href="{{ site.baseurl }}docs/installing/script/">install script</a> for you.
+<a href="{{ page.baseurl }}/docs/installing/script/">install script</a> for you.
 </p>
 
-Note that this is just one of [several ways to install Alaveteli]({{ site.baseurl }}docs/installing/).
+Note that this is just one of [several ways to install Alaveteli]({{ page.baseurl }}/docs/installing/).
 
 The included steps will use vagrant to create a development environment
 where you can run the test suite, the development server and make
@@ -50,7 +50,7 @@ Ubuntu 12.04 LTS that contains everything you need to work on Alaveteli.
 
 ## What next?
 
-Check out the [next steps]({{ site.baseurl }}docs/installing/next_steps/).
+Check out the [next steps]({{ page.baseurl }}/docs/installing/next_steps/).
 
 ## Customizing the Vagrant instance
 
