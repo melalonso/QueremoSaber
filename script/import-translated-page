@@ -68,7 +68,8 @@ end
 
 class UnsupportedMatchChecker
   UNSUPPORTED_MATCHERS = {
-    :multi_line_redirect => /^redirect_\w+:(\s*-{1}\s*.*)+$/i
+    :multi_line_redirect => /^redirect_\w+:(\s*-{1}\s*.*)+$/i,
+    :include_template => /\{\%\s*include/i
   }
 
   attr_reader :warnings
