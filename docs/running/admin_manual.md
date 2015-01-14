@@ -20,7 +20,7 @@ title: Administrator's guide
     <b>Before you start...</b>
     This admin guide assumes your Alaveteli site is already up and running.
     If it's not, you need to follow the steps for
-    <a href="{{ site.baseurl }}docs/getting_started/">getting started with Alaveteli</a>.
+    <a href="{{ page.baseurl }}/docs/getting_started/">getting started with Alaveteli</a>.
   </p>
 </div>
 
@@ -64,10 +64,10 @@ WhatDoTheyKnow usually has about 3 active volunteers at any one time managing
 the support, plus a few other less active people who help out at different
 times.
 
-Administration tasks can be split into [**maintenance**]({{ site.baseurl }}docs/running/admin_manual/#maintenance) and [**user support**]({{ site.baseurl }}docs/running/admin_manual/#user-support).
+Administration tasks can be split into [**maintenance**]({{ page.baseurl }}/docs/running/admin_manual/#maintenance) and [**user support**]({{ page.baseurl }}/docs/running/admin_manual/#user-support).
 The boundaries of these tasks is in fact quite blurred; the main distinction is
 that the former happen exclusively through the web 
-<a href="{{ site.baseurl }}docs/glossary/#admin" class="glossary__link">admin interface</a>, whereas the
+<a href="{{ page.baseurl }}/docs/glossary/#admin" class="glossary__link">admin interface</a>, whereas the
 latter are mediated by email directly with end users (but often result in
 actions through the web admin interface).
 
@@ -321,11 +321,11 @@ line, and piping the contents of that file into the mail handling script. e.g.
 ### Administrator privileges and accessing the admin interface
 
 The 
-<a href="{{ site.baseurl }}docs/glossary/#admin" class="glossary__link">administrative interface</a>
+<a href="{{ page.baseurl }}/docs/glossary/#admin" class="glossary__link">administrative interface</a>
 is at the URL `/admin`.
 
 Only users with the
-<a href="{{ site.baseurl }}docs/glossary/#super" class="glossary__link">super</a>
+<a href="{{ page.baseurl }}/docs/glossary/#super" class="glossary__link">super</a>
 admin level can access the admin interface. To make a new administrator,
 create a user account in the usual way (signing in using the web front-end),
 and then have an existing administrator to grant them *super* privileges.
