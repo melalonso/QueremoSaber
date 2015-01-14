@@ -11,11 +11,11 @@ title: Next Steps
 ## Create a superuser admin account
 
 Alaveteli ships with an
-<a href="{{site.baseurl}}docs/glossary/#emergency" class="glossary__link">emergency user</a>
+<a href="{{ page.baseurl }}/docs/glossary/#emergency" class="glossary__link">emergency user</a>
 that has access to the admin. So when you've just created a new site, you
 should sign up to create your own account, then log into admin as the emergency
 user to promote your new account to be an administrator with
-<a href="{{ site.baseurl }}docs/glossary/#super" class="glossary__link">super</a>
+<a href="{{ page.baseurl }}/docs/glossary/#super" class="glossary__link">super</a>
 privilege.
 
 As soon as that's done, disable the emergency user, because you don't need to
@@ -33,8 +33,8 @@ First, in the browser:
 * Go to `/profile/sign_in` and create a user by signing up.
 * Check your email and confirm your account.
 * Go to `/admin?emergency=1`, log in with the username and password you specified in
-  [`ADMIN_USERNAME`]({{site.baseurl}}docs/customising/config/#admin_username)
-  and [`ADMIN_PASSWORD`]({{site.baseurl}}docs/customising/config/#admin_password).
+  [`ADMIN_USERNAME`]({{ page.baseurl }}/docs/customising/config/#admin_username)
+  and [`ADMIN_PASSWORD`]({{ page.baseurl }}/docs/customising/config/#admin_password).
   You can find these settings in `config/general.yml`.
 * You're now on the Alaveteli admin page.
 * Click on **Users**  (in the navigation menu across the top of the page), and
@@ -64,13 +64,13 @@ emergency user access to the admin. On the command line shell, edit
 * It's important that you change the emergency user's password (and, ideally,
   the username too) from the values Alavateli ships with, because they are
   public and hence insecure. In `general.yml`, change
-  [`ADMIN_PASSWORD`]({{site.baseurl}}docs/customising/config/#admin_password)
-  (and maybe [`ADMIN_USERNAME`]({{site.baseurl}}docs/customising/config/#admin_username)
+  [`ADMIN_PASSWORD`]({{ page.baseurl }}/docs/customising/config/#admin_password)
+  (and maybe [`ADMIN_USERNAME`]({{ page.baseurl }}/docs/customising/config/#admin_username)
   too) to new, unique values.
 * Additionally, you can totally disable the emergency user. Under normal
   operation you don't need it, because from now on you'll be using the admin
   user you've just created.
-  Set [`DISABLE_EMERGENCY_USER`]({{site.baseurl}}docs/customising/config/#disable_emergency_user)
+  Set [`DISABLE_EMERGENCY_USER`]({{ page.baseurl }}/docs/customising/config/#disable_emergency_user)
   to `true`.
 * To apply these changes restart the service as a user with root privileges:
   `sudo service alaveteli restart`
@@ -110,8 +110,8 @@ follow the steps described in the previous section.
 
 * You should receive the request email -- try replying to it. Your response
   email should appear in Alaveteli. Not working? Take a look at our
-  [troubleshooting tips]({{ site.baseurl}}docs/installing/manual_install/#troubleshooting).
-  If that doesn't sort it out, [get in touch]({{ site.baseurl}}community/) on
+  [troubleshooting tips]({{ page.baseurl }}/docs/installing/manual_install/#troubleshooting).
+  If that doesn't sort it out, [get in touch]({{ page.baseurl }}/community/) on
   the [developer mailing list](https://groups.google.com/forum/#!forum/alaveteli-dev) or [IRC](http://www.irc.mysociety.org/) for help.
 
 ## Import Public Authorities
@@ -122,4 +122,4 @@ You can find the uploader in under the "Authorities" tab of the admin section, o
 
 ## Start thinking about customising Alaveteli
 
-Check out [our guide]({{ site.baseurl}}docs/customising/).
+Check out [our guide]({{ page.baseurl }}/docs/customising/).
