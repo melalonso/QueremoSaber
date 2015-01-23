@@ -6,6 +6,7 @@
     <h3><%= _('No results found.') %></h3>
   <% end %>
   <div id="authority_search_ahead_results">
+    <% @include_request_link_in_authority_listing = true %>
     <% for result in @xapian_requests.results %>
       <%= render :partial => 'public_body/body_listing_single', :locals => { :public_body => result[:model] } %>
     <% end %>
