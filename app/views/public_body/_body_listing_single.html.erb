@@ -37,12 +37,11 @@
            <% end %>
         <% end %>
     </span>
-    <% if request_link %>
-      <% unless public_body.special_not_requestable_reason? %>
-        <div class="make-request-quick-button">
-          <%= link_to _("Make a request"), new_request_to_body_path(:url_name => public_body.url_name), :class => "link_button_green" %>
-        </div>
-      <% end %>
+
+    <% if request_link && public_body.is_requestable? %>
+      <div class="make-request-quick-button">
+        <%= link_to _("Make a request"), new_request_to_body_path(:url_name => public_body.url_name), :class => "link_button_green" %>
+      </div>
     <% end %>
 </div>
 
