@@ -44,9 +44,11 @@
         <% end %>
 
         <div id="stepwise_make_request">
-            <% if !@public_body.special_not_requestable_reason? %>
+            <% if @public_body.is_requestable? %>
                 <%= link_to _("Make a request to this authority"), new_request_to_body_path(:url_name => @public_body.url_name), :class => "link_button_green" %>
-            <% elsif @public_body.has_notes? %>
+            <% end %>
+
+            <% if @public_body.has_notes? %>
                 <%= @public_body.notes_as_html.html_safe %>
             <% end %>
         </div>
