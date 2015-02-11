@@ -20,11 +20,12 @@ module PublicBodyHelper
     end
 
     unless public_body.has_request_email?
-      msg = _(%Q(Unfortunately, we do not have a working
-                 <a href="{{contact_url}}">contact address</a> for
-                 {{body_name}}.).squish,
-              :body_name => public_body.name,
-              :contact_url => view_public_body_email_path(public_body.url_name))
+      # Make the authority appear requestable to encourage users to help find
+      # the authroty's email address
+      msg = link_to _("Make a request to this authority"),
+                      new_request_to_body_path(:url_name => public_body.url_name),
+                      :class => "link_button_green"
+
       reasons.push(msg)
     end
 
