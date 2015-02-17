@@ -119,13 +119,23 @@ class AdminPublicBodyController < AdminController
                 redirect_to admin_body_show_url(@public_body)
             else
                 I18n.available_locales.each do |locale|
-                    translation_params = params[:public_body][:translations_attributes].fetch(locale, nil)
-                    if translation_params
-                      @public_body.translations.build(translation_params)
-                    else
+                    # If its the default locale, just build a translation so
+                    # that the form tab is rendered. The values from the parent
+                    # @public_body will be used in the fields.
+                    if locale == I18n.default_locale
                       @public_body.translations.build(:locale => locale)
+                      next
+                    end
+
+                    # If we can't find a persisted translation and one was
+                    # submitted for the locale, build it with the params we
+                    # got sent
+                    translation_params = params[:public_body][:translations_attributes].fetch(locale, nil)
+                    if !@public_body.translations.where(:locale => locale).first && translation_params
+                      @public_body.translations.build(translation_params)
                     end
                 end
+
                 render :action => 'new'
             end
         end
