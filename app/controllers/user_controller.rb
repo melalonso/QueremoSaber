@@ -568,6 +568,13 @@ class UserController < ApplicationController
             render :action => 'set_profile_about_me'
             return
         end
+
+        if @user.banned?
+          flash[:error] = _('Banned users cannot edit their profile')
+          redirect_to set_profile_about_me_path
+          return
+        end
+
         @about_me = AboutMeValidator.new(@user)
         if !@about_me.valid?
             render :action => 'set_profile_about_me'
