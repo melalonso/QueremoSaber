@@ -294,10 +294,14 @@ class User < ActiveRecord::Base
     def admin_page_links?
         super?
     end
+
     # Is it public that they are banned?
-    def public_banned?
-        !ban_text.empty?
+    def banned?
+      !ban_text.empty?
     end
+
+    alias_method :public_banned?, :banned?
+
     # Various ways the user can be banned, and text to describe it if failed
     def can_file_requests?
         ban_text.empty? && !exceeded_limit?
