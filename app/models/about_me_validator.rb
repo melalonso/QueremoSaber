@@ -3,19 +3,21 @@
 #
 # Copyright (c) 2010 UK Citizens Online Democracy. All rights reserved.
 # Email: hello@mysociety.org; WWW: http://www.mysociety.org/
+require 'forwardable'
 
 class AboutMeValidator
+    extend Forwardable
     include ActiveModel::Validations
 
-    attr_accessor :about_me
+    def_delegators :@subject, :about_me
 
-    # TODO: Switch to built in validations
     validate :length_of_about_me
 
-    def initialize(attributes = {})
-        attributes.each do |name, value|
-            send("#{name}=", value)
-        end
+    def initialize(subject)
+      unless subject.respond_to?(:about_me)
+        raise 'subject must respond to :about_me'
+      end
+      @subject = subject
     end
 
     private

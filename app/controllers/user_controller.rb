@@ -564,12 +564,11 @@ class UserController < ApplicationController
         if !params[:submitted_about_me]
             params[:about_me] = {}
             params[:about_me][:about_me] = @user.about_me
-            @about_me = AboutMeValidator.new(params[:about_me])
+            @about_me = AboutMeValidator.new(@user)
             render :action => 'set_profile_about_me'
             return
         end
-
-        @about_me = AboutMeValidator.new(params[:about_me])
+        @about_me = AboutMeValidator.new(@user)
         if !@about_me.valid?
             render :action => 'set_profile_about_me'
             return
