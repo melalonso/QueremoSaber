@@ -155,7 +155,7 @@
         <div class="results_block">
           <% for result in @xapian_bodies.results %>
             <%= render :partial => 'public_body/body_listing_single',
-                       :locals => { :public_body => result[:model]
+                       :locals => { :public_body => result[:model],
                                     :request_link => true }  %>
           <% end %>
         </div>
