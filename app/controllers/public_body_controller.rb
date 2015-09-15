@@ -177,7 +177,7 @@ class PublicBodyController < ApplicationController
                 @public_bodies = PublicBody.paginate_by_sql(
                     sql,
                     :page => params[:page],
-                    :per_page => 100)
+                    :per_page => 10)
             else
                 # The simpler case where we're just searching in the current locale:
                 where_condition = get_public_body_list_translated_condition('public_body_translations', first_letter, true) +
@@ -188,7 +188,7 @@ class PublicBodyController < ApplicationController
                 @public_bodies = PublicBody.where(where_sql).
                                    joins(:translations).
                                      order("public_body_translations.name").
-                                       paginate(:page => params[:page], :per_page => 100)
+                                       paginate(:page => params[:page], :per_page => 10)
             end
 
             respond_to do |format|

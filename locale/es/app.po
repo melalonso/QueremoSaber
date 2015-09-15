@@ -1519,7 +1519,7 @@ msgstr ""
 "        información</strong>"
 
 msgid "Make a request"
-msgstr "Enviar solicitud"
+msgstr "Enviá una solicitud"
 
 msgid "Make a request &raquo;"
 msgstr ""
@@ -2201,10 +2201,10 @@ msgid "RSS feed of updates"
 msgstr "Actualizaciones RSS"
 
 msgid "Re-edit this annotation"
-msgstr "Editar este comentario"
+msgstr "Editá este comentario"
 
 msgid "Re-edit this message"
-msgstr "Editar este mensaje"
+msgstr "Editá este mensaje"
 
 msgid "Read about <a href=\"{{advanced_search_url}}\">advanced search operators</a>, such as proximity and wildcards."
 msgstr "Lee más sobre <a href=\"{{advanced_search_url}}\">operadores avanzados de búsqueda</a>, como indicadores de proximidad y comodines."
@@ -2225,16 +2225,16 @@ msgid "Remember me (keeps you signed in longer; do not use on a public computer)
 msgstr ""
 
 msgid "Report abuse"
-msgstr "Denuncie abuso"
+msgstr "Denunciá abuso"
 
 msgid "Report an offensive or unsuitable request"
-msgstr "Alertar sobre una solicitud ofensiva o inapropiada"
+msgstr "Alertá sobre una solicitud ofensiva o inapropiada"
 
 msgid "Report request"
-msgstr "Alertar de esta solicitud"
+msgstr "Alertá de esta solicitud"
 
 msgid "Report this request"
-msgstr "Denunciar  este pedido"
+msgstr "Denunciá este pedido"
 
 msgid "Reported for administrator attention."
 msgstr "Reportar al administrador"
@@ -2243,13 +2243,13 @@ msgid "Reporting a request notifies the site administrators. They will respond a
 msgstr "Al reportar una solicitud se le notifica a los administradores del sitio. Ellos responderán lo antes posible."
 
 msgid "Request an internal review"
-msgstr "Pida una revisión interna"
+msgstr "Pedí una revisión interna"
 
 msgid "Request an internal review from {{person_or_body}}"
-msgstr "Pedir una revisión interna a {{person_or_body}}"
+msgstr "Pedí una revisión interna a {{person_or_body}}"
 
 msgid "Request email"
-msgstr "Email para solicitudes"
+msgstr "Correo para solicitudes"
 
 msgid "Request for personal information"
 msgstr "Solicitud de información personal"
@@ -2443,13 +2443,13 @@ msgid "Sign in or make a new account"
 msgstr "Abrir sesión o crear nueva cuenta"
 
 msgid "Sign in or sign up"
-msgstr "Iniciar sesión o registro"
+msgstr "Iniciá sesión o registrate"
 
 msgid "Sign out"
-msgstr "Cerrar sesión"
+msgstr "Cerrá sesión"
 
 msgid "Sign up"
-msgstr "Registrarse"
+msgstr "Registrate"
 
 msgid "Similar requests"
 msgstr "Solicitudes similares"

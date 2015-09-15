@@ -23,7 +23,7 @@ rake
 ruby-bundler
 ruby1.9.1
 ruby1.9.1-dev
-rubygems
+rubygems-integration
 sharutils
 sqlite3
 tnef
